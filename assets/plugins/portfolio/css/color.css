@@ -1,0 +1,29 @@
+#lax-portfolio .portfolio-controllers .filter-btn.active-work {
+    background: #1b426e;
+}
+
+.work{
+	background-color: #f9f9f9;
+}
+
+
+#lax-portfolio .portfolio-link li a i{
+	background-color: transparent;
+	/*border: 1px solid #00CCCC;*/
+	color: #fff;
+}
+
+#lax-portfolio .portfolio-link li a:hover i.fa-link,
+#lax-portfolio .portfolio-link li a:hover i.fa-plus{
+	background-color: #2a2c42;
+	color: #fff;
+}
+#lax-portfolio .portfolio-item-title{
+	color: #fff;
+}
+#lax-portfolio .portfolio-item-title:after{
+	background-color: transparent;
+}
+#lax-portfolio .caption-content{
+	background-color: rgba(225, 225, 225, .4);
+}

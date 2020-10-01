@@ -1,0 +1,204 @@
+/*
+=====================================================
+					Default Style
+=====================================================
+*/
+
+
+#lax-portfolio .shutter-lock{
+	transform: translateZ(0);
+	position: relative;
+}
+#lax-portfolio .shutter-lock:after{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 100%;
+	-webkit-transition : all 0.5s ease-in-out;
+	transition : all 0.5s ease-in-out;
+	z-index: -1;
+}
+#lax-portfolio .shutter-lock:hover:after{
+	width: 100%;
+}
+#lax-portfolio .title{
+	text-transform: uppercase;
+}
+#lax-portfolio .title strong{
+	font-weight: 900;
+}
+#lax-portfolio .slider-btn{
+	font-weight: 700;
+}
+#lax-portfolio .parallax{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -999;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+#lax-portfolio .more{
+	text-align: center;
+}
+#lax-portfolio .more a{
+	display: inline-block;
+	padding: 15px 25px;
+	border-radius: 2px;
+	font-weight: 700;
+	text-transform: uppercase;
+	-webkit-transition : all 0.3s ease;
+	transition : all 0.3s ease;
+}
+#lax-portfolio .more a:hover{
+	box-shadow: 0px 0px 5px #1b1a1a;
+}
+/*
+====================================================
+				6.Portfolio
+====================================================
+*/
+.work{
+	padding: 80px 0px;
+}
+#lax-portfolio .work-title{
+	padding-bottom: 30px;
+	text-align: center;
+}
+#lax-portfolio .portfolio-controllers-container{
+	margin-bottom: 30px;
+	text-align: center;
+}
+#lax-portfolio .portfolio-controllers{
+	padding: 0px;
+	height: 100%;
+	display: inline-block;
+}
+#lax-portfolio .portfolio-controllers .filter-btn{
+	float: left;
+	padding: 10px 15px;
+	outline: 0px;
+	margin: 0px 15px 15px 0px;
+	-webkit-transition : all 0.3s ease;
+	transition : all 0.3s ease;
+	cursor: pointer;
+}
+.more-container{
+	margin-top: 40px;
+}
+#lax-portfolio .portfolio{
+	padding: 14px 7px;
+}
+#lax-portfolio .portfolio-image{
+	position: relative;
+	overflow: hidden;
+}
+#lax-portfolio .portfolio-image img{
+	width: 100%;
+	height: 100%;
+	transform : scale(1);
+	-webkit-transition : all 0.5s ease;
+	transition : all 0.5s ease;
+	position: relative;
+}
+#lax-portfolio .portfolio-image:hover img{
+	transform : scale(1.2);
+	cursor: pointer;
+}
+
+.work .caption{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+	opacity: 0;
+	transform : scale(1.2);
+	-webkit-transition : all 0.5s ease;
+	transition : all 0.5s ease;
+	padding: 10px;
+	z-index: 999;
+}
+#lax-portfolio .caption-content{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#lax-portfolio .portfolio-image:hover .caption{
+	opacity: 1;
+	transform : scale(1);
+}
+.caption-content{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/*background-color : rgba(0,204,204,0.8);*/
+	position: relative;
+}
+#lax-portfolio .portfolio-link{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#lax-portfolio .portfolio-link li{
+	float: left;
+	margin-right: 5px;
+}
+#lax-portfolio .portfolio-link li a i{
+	font-size: 25px;
+	border-radius: 2px;
+	-webkit-transition : all 0.3s linear;
+	transition : all 0.3s linear;
+}
+#lax-portfolio .portfolio-link li a i.fa-link{
+	padding: 10px 15px;
+}
+#lax-portfolio .portfolio-link li a i.fa-plus{
+	padding: 10px 17px;
+}
+#lax-portfolio .portfolio-item-title{
+	width: 90%;
+	height: 40px;
+	overflow: hidden;
+    font-size: 18px;
+   	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translateX(-50%);
+}
+#lax-portfolio .portfolio-item-title:after{
+	position: absolute;
+    bottom: 0;
+    left: 35%;
+    content: '';
+    width: 30%;
+    height: 2px;
+}
+
+.footer-bottom p{
+	text-align: center;
+}
+
+/*Xtra Large*/
+@media (min-width: 1200px){}
+/*Medium Device*/
+@media(min-width:992px){}
+/*Small Device*/
+@media(min-width:768px){}
+/*Xtra Small Device*/
+@media(max-width:767px){
+
+	#lax-portfolio .portfolio-controllers .filter-btn{
+		margin-bottom: 15px;
+		padding: 10px 12px;
+		margin-left: 10px;
+	}
+}

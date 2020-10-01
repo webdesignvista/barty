@@ -1,0 +1,1461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Created by https://webdesignvista.com/ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="https://webdesignvista.com/">
+    <title>Document</title>
+            <link rel="stylesheet" href="assets/color-themes/bootstrap.lab.min.css" >
+        <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <!-- Home page header dynamic assets -->
+<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+
+<style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .t-img-block {
+        width: 100%;
+        max-width: 90px;
+        height: 100%;
+        max-height: 90px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 3px solid #eeeeee;
+    }
+
+    .t-text {
+        width: 100%;
+        max-width: 600px;
+    }
+</style>
+
+<style>
+
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,0.4);
+        z-index: 1;
+    }
+
+    .carousel-item-inner {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 30vh;
+        margin-bottom: 25vh;
+        padding: 2rem;
+        color: white;
+        z-index: 2;
+        background:rgb(68, 110, 155, .9);
+    }
+
+    /* Slider */
+    .slick-slide {
+        margin: 0px 20px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+    .slick-slider
+    {
+        position: relative;
+
+        display: block;
+        box-sizing: border-box;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list
+    {
+        position: relative;
+
+        display: block;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus
+    {
+        outline: none;
+    }
+    .slick-list.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+
+    .slick-track
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        display: block;
+    }
+    .slick-track:before,
+    .slick-track:after
+    {
+        display: table;
+
+        content: '';
+    }
+    .slick-track:after
+    {
+        clear: both;
+    }
+    .slick-loading .slick-track
+    {
+        visibility: hidden;
+    }
+
+    .slick-slide
+    {
+        display: none;
+        float: left;
+
+        height: 100%;
+        min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide
+    {
+        float: right;
+    }
+    .slick-slide img
+    {
+        display: block;
+    }
+    .slick-slide.slick-loading img
+    {
+        display: none;
+    }
+    .slick-slide.dragging img
+    {
+        pointer-events: none;
+    }
+    .slick-initialized .slick-slide
+    {
+        display: block;
+    }
+    .slick-loading .slick-slide
+    {
+        visibility: hidden;
+    }
+    .slick-vertical .slick-slide
+    {
+        display: block;
+
+        height: auto;
+
+        border: 1px solid transparent;
+    }
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+
+
+</style>
+
+<style>
+
+    .primary-nav {
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+    }
+
+
+    .shrink .navbar-brand {
+        height: 0 !important;
+        line-height: 0 !important;
+    }
+
+    .shrink {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: 55px !important;
+        background: rgba(0,0,0,0.99) !important;
+    }
+
+    .shrink a {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;       
+    }
+
+</style>
+
+<link rel="stylesheet" href="assets/plugins/portfolio/css/style.css">
+<link rel="stylesheet" href="assets/plugins/portfolio/css/color.css">
+
+<!-- Pricing Table 3 -->
+<style>
+    /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+#pricing-table-3 .rounded-lg {
+  border-radius: 1rem !important;
+}
+
+#pricing-table-3 .text-small {
+  font-size: 0.9rem !important;
+}
+
+#pricing-table-3 .custom-separator {
+  width: 5rem;
+  height: 6px;
+  border-radius: 1rem;
+}
+
+#pricing-table-3 .text-uppercase {
+  letter-spacing: 0.2em;
+}
+
+
+</style> 
+
+<!-- END Pricing Table3 -->
+
+<!-- End Home page header dynamic assets -->            
+<style>
+
+            .navbar {
+            min-height: 80px;
+            }
+
+            .navbar-brand {
+            padding: 0 15px;
+            height: 80px;
+            line-height: 80px;
+            }
+
+            .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+            }
+
+            @media (min-width: 768px) {
+                .navbar-nav > li > a {
+                    /* (80px - line-height of 27px) / 2 = 26.5px */
+                    padding-top: 26.5px;
+                    padding-bottom: 26.5px;
+                    line-height: 27px;
+                }
+            }
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark primary-nav border-0">
+        <div class="container">    
+            <a class="navbar-brand brand-text fa-32" href="#">Barty</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#si-about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#si-services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#si-whyus">Why Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#lax-portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#si-testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing-table-3">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#si-team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#si-contact">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>               
+               
+            
+                </ul>
+            
+            </div>
+        </div> 
+    </nav>
+    <!-- INTRO -->
+    <div class="w-100 h-100 overflow-hidden" id='si-intro'>
+    <!-- Swiper -->
+        <div class="hero-swiper-container text-center" style="">
+            <div class="swiper-wrapper">
+                                <div class="swiper-slide active overflow-hidden"  
+                        style=" background: url('assets/images/cropped/15674152874955.jpg'); background-size: cover;">
+                        <div class="carousel-item-inner position-relative">
+                            <h1 class="text-light font-weight-bold fa-48 pt-4">
+                                FULL WIDTH INTRO							
+                            </h1>
+                            <span class="d-block pb-4 font-weight-normal">
+                                Sapiente eaque facilis in laboriosam ad est sit aut laborum amet cupiditate						</span>
+                            <button class="btn btn-primary btn-lg">More Info.</button>
+                            <button class="btn btn-outline-dark btn-lg text-light">Get a quote!</button>
+                        </div>	
+                    </div>
+                                            <div class="swiper-slide  overflow-hidden"  
+                        style=" background: url('assets/images/cropped/15674143243332.jpg'); background-size: cover;">
+                        <div class="carousel-item-inner position-relative">
+                            <h1 class="text-light font-weight-bold fa-48 pt-4">
+                                FULL WIDTH INTRO							
+                            </h1>
+                            <span class="d-block pb-4 font-weight-normal">
+                                Mollitia et odit optio sed numquam eius nobis dolorum repellendus						</span>
+                            <button class="btn btn-primary btn-lg">More Info.</button>
+                            <button class="btn btn-outline-dark btn-lg text-light">Get a quote!</button>
+                        </div>	
+                    </div>
+                                            <div class="swiper-slide  overflow-hidden"  
+                        style=" background: url('assets/images/cropped/15674142773382.jpg'); background-size: cover;">
+                        <div class="carousel-item-inner position-relative">
+                            <h1 class="text-light font-weight-bold fa-48 pt-4">
+                                FULL WIDTH INTRO							
+                            </h1>
+                            <span class="d-block pb-4 font-weight-normal">
+                                Inventore distinctio consequuntur nemo asperiores numquam sit						</span>
+                            <button class="btn btn-primary btn-lg">More Info.</button>
+                            <button class="btn btn-outline-dark btn-lg text-light">Get a quote!</button>
+                        </div>	
+                    </div>
+                                    </div>
+            <!-- Add Pagination -->
+            <div class="hero-swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- ABOUT US -->
+    <section class='w-100 pt-5' id="si-about">
+        <div class='container pt-5'>
+            <div class='row'>			
+                <div class='col-12 col-md-4'>
+                <!--
+                    <img class="w-100 border cshadow" src="" alt=""> -->
+                    <img class="w-100 border cshadow" src="assets/images/concepts/concept-1.jpg" alt="">
+                </div>
+                <div class='col-12 col-md-8'>
+                    <h2 class="ont-weight-bold ">ABOUT BARTY THEME
+                                        </h2>
+                    <p>
+                        Quisquam est tempora eaque vel dolor veritatis cum cum deserunt veniam nulla nesciunt voluptates voluptas dolores aspernatur sit tempora non necessitatibus fuga aliquam voluptas reiciendis et tempora quia				</p>
+                    <p>
+                        <button class='btn btn-primary'>More Info.</button>
+                    </p>
+                </div>
+            </div>		
+        </div>
+    </section>
+    <!-- SERVICES -->
+    <div class='container bg-sec' id="si-services">
+        <div class='text-center'>
+            <h2>OUR SERVICES</h2>
+            <span class='d-block text-muted fs-18'>We provide a wide range of services for all types of businesses</span>
+        </div>
+        <div class='row pt-5'>
+                    <div class='col-12 col-md-4 '>
+                <div class="service-item-wrapper py-3">
+                    <div class="service-item bg-light p-4 border text-center" style="min-height: 300px;">
+                        <span class="d-block w-100">
+                            <i class="material-icons text-primary md-48" style="width: 100%; max-width: 45px">swap_horiz e8d4</i>
+                        </span>
+                        <span class='d-block font-weight-bold'>
+                            Cost Reduction					</span>
+                        <span class='d-block'>
+                            Consequatur et incidunt quasi voluptas et temporibus adipisci hic delectus velit et unde					</span>
+                        <span class='d-block py-3'>
+                            <button class="btn btn-primary btn-sm text-light">
+                                More Info.
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                    <div class='col-12 col-md-4 '>
+                <div class="service-item-wrapper py-3">
+                    <div class="service-item bg-light p-4 border text-center" style="min-height: 300px;">
+                        <span class="d-block w-100">
+                            <i class="material-icons text-primary md-48" style="width: 100%; max-width: 45px">sms_failed e626</i>
+                        </span>
+                        <span class='d-block font-weight-bold'>
+                            Cost Reduction					</span>
+                        <span class='d-block'>
+                            Ut omnis iusto amet provident qui esse aut quam non sit quidem nihil necessitatibus mollitia					</span>
+                        <span class='d-block py-3'>
+                            <button class="btn btn-primary btn-sm text-light">
+                                More Info.
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                    <div class='col-12 col-md-4 '>
+                <div class="service-item-wrapper py-3">
+                    <div class="service-item bg-light p-4 border text-center" style="min-height: 300px;">
+                        <span class="d-block w-100">
+                            <i class="material-icons text-primary md-48" style="width: 100%; max-width: 45px">view_compact e42b</i>
+                        </span>
+                        <span class='d-block font-weight-bold'>
+                            Cost Reduction					</span>
+                        <span class='d-block'>
+                            Cumque animi recusandae non architecto voluptatum dolorem fugit dolores occaecati quas sit dolorem optio					</span>
+                        <span class='d-block py-3'>
+                            <button class="btn btn-primary btn-sm text-light">
+                                More Info.
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                    <div class='col-12 col-md-4 '>
+                <div class="service-item-wrapper py-3">
+                    <div class="service-item bg-light p-4 border text-center" style="min-height: 300px;">
+                        <span class="d-block w-100">
+                            <i class="material-icons text-primary md-48" style="width: 100%; max-width: 45px">fullscreen_exit e5d1</i>
+                        </span>
+                        <span class='d-block font-weight-bold'>
+                            Monthly Reporting					</span>
+                        <span class='d-block'>
+                            Quisquam officiis perspiciatis asperiores illum aut error fugiat aut vero mollitia adipisci saepe					</span>
+                        <span class='d-block py-3'>
+                            <button class="btn btn-primary btn-sm text-light">
+                                More Info.
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                    <div class='col-12 col-md-4 '>
+                <div class="service-item-wrapper py-3">
+                    <div class="service-item bg-light p-4 border text-center" style="min-height: 300px;">
+                        <span class="d-block w-100">
+                            <i class="material-icons text-primary md-48" style="width: 100%; max-width: 45px">format_paint e243</i>
+                        </span>
+                        <span class='d-block font-weight-bold'>
+                            Business Growth					</span>
+                        <span class='d-block'>
+                            Corporis dolor nesciunt temporibus pariatur aliquid sed est aut ut sunt dolores alias consequatur					</span>
+                        <span class='d-block py-3'>
+                            <button class="btn btn-primary btn-sm text-light">
+                                More Info.
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                    <div class='col-12 col-md-4 '>
+                <div class="service-item-wrapper py-3">
+                    <div class="service-item bg-light p-4 border text-center" style="min-height: 300px;">
+                        <span class="d-block w-100">
+                            <i class="material-icons text-primary md-48" style="width: 100%; max-width: 45px">show_chart e6e1</i>
+                        </span>
+                        <span class='d-block font-weight-bold'>
+                            Database Solutions					</span>
+                        <span class='d-block'>
+                            Dolor quia omnis dolor aut quia nobis beatae reiciendis est aperiam animi sit					</span>
+                        <span class='d-block py-3'>
+                            <button class="btn btn-primary btn-sm text-light">
+                                More Info.
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                </div>
+    </div>
+    <!-- CALL TO ACTION --> 
+    <section class="bg-primary py-5" id="si-calltoaction">
+        <div class='container py-2'>
+            <div class='row'>
+                <div class='col-12 col-md-8'>
+                    <h1 class="text-light">We promote just one thing <br> YOUR BUSINESS !!</h1>
+                </div>
+                <div class='col-12 col-md-4 pt-3'>
+                    <button class="btn btn-primary" style="height: 5rem; width: 15rem; font-size: 28px">CALL US NOW !</button>
+                </div>
+            </div>     
+        </div>
+    </section>
+    <!-- WHY US --> 
+    <section class="bg-sec" id="si-whyus">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-12 col-md-6'>
+                    <h2 class="font-weight-bold">
+                        Why Choose Us
+                                        </h2>
+                    <div class="accordion" id="accordionExample">
+
+                                                <div class="card border-0">
+                                <div class="card-header border-0 bg-white" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-link fs-22 text-decoration-none text-muted" 
+                                            data-toggle="collapse" 
+                                            data-target="#collapse1"
+                                        >
+                                            <i class="fa fa-plus"></i> Tenacity                                    </button>									
+                                    </h2>
+                                </div>
+                                <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            Expedita occaecati ipsam sit quidem quia ut iusto doloribus voluptatem nostrum quis ducimus dolorem corrupti et odit officia dolor eveniet est impedit maxime aut deserunt ea                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                                                <div class="card border-0">
+                                <div class="card-header border-0 bg-white" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-link fs-22 text-decoration-none text-muted" 
+                                            data-toggle="collapse" 
+                                            data-target="#collapse2"
+                                        >
+                                            <i class="fa fa-plus"></i> Positive language                                    </button>									
+                                    </h2>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            Aspernatur totam qui earum aliquam asperiores est qui est quos reiciendis enim voluptatum qui maiores consequuntur quia quidem qui eos et magnam                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                                                <div class="card border-0">
+                                <div class="card-header border-0 bg-white" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-link fs-22 text-decoration-none text-muted" 
+                                            data-toggle="collapse" 
+                                            data-target="#collapse3"
+                                        >
+                                            <i class="fa fa-plus"></i> Positive language                                    </button>									
+                                    </h2>
+                                </div>
+                                <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            Iure rerum sint itaque voluptate deleniti architecto deleniti et sapiente atque reiciendis quia nulla et quis iure saepe vero nam qui alias qui quo excepturi sapiente odit nisi velit odit                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                                        
+                    
+                    </div>     
+                </div>
+                <div class='col-12 col-md-6'>
+                    <img class="img-fluid border cshadow" src="assets/images/concepts/concept-2.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- PORTFOLIO -->
+    <!-- Start Work Section -->
+    <section class="work" id="lax-portfolio">
+        <div class="container">
+            <h2 class="work-title title text-center">Our Awesome <strong>Work</strong></h2>
+            <div class="row portfolio-controllers-container col">
+                <div class="portfolio-controllers wow fadeLeft mx-auto" data-wow-duration="1s" data-wow-delay=".1s">
+                    <button type="button" class="btn btn-primary btn-sm filter-btn active-work" data-filter="all">
+                        All
+                    </button>
+                    
+                                    
+                        <button type="button" class="btn btn-primary btn-sm filter-btn" data-filter=".finance">
+                                                        Finance						</button>
+                                    
+                        <button type="button" class="btn btn-primary btn-sm filter-btn" data-filter=".training">
+                                                        Training						</button>
+                                    
+                        <button type="button" class="btn btn-primary btn-sm filter-btn" data-filter=".insurance">
+                                                        Insurance						</button>
+                                    
+
+                </div>
+            </div>
+        </div>
+        <div class="portfolios">
+
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio finance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141513485.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Minus							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio training">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674142596769.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Voluptate							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio insurance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141296745.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Voluptatem							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio insurance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141374509.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Eligendi Earum Voluptatem							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio insurance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141625023.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Autem Vero							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio insurance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141625023.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Soluta Modi Nobis							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio insurance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141425702.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Enim Velit Doloremque							
+                            </h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio training">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141595411.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Illo Aut Dolore							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio training">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674142596769.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Sint							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 m-0 p-0 portfolio finance">
+                <figure class="portfolio-image">
+                    <img src="assets/images/cropped/15674141276874.jpg" alt="" class="img-responsive">
+                    <figcaption class="caption text-center">
+                        <div class="caption-content">
+                            <h3 class="portfolio-item-title text-center sub-title">
+                                Id Earum Incidunt							</h3>
+                            <ul class="portfolio-link list-unstyled">
+                                <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                    
+        </div>
+        
+    </section><!-- End Work Section -->
+
+    <!-- TESTIMONIALS -->
+    <section class='' id="si-testimonials">
+        <div class='text-center py-5'>
+            <h2>CLIENT TESTIMONIALS</h2>
+            <span class='d-block text-muted fs-18'>What our esteemed clients say about us</span>
+        </div>
+        <!-- Swiper -->
+        <div class='container overflow-hidden text-center'>
+            <div class="testimonial3-swiper-container ">
+                <div class="swiper-wrapper">
+
+                    
+                        <div class="swiper-slide text-left">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <img class="w-100 cshadow" src="assets/images/testimonials/testimonial-1.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-md-8 my-auto ">
+                                    <span class="d-block">
+                                        <sup class='d-block-inline pr-2 text-muted'>
+                                            <i class="fas fa-quote-left"></i>  
+                                        </sup> Et est alias voluptas autem consectetur tenetur totam odit debitis ea voluptatem rerum molestiae accusantium aut inventore molestiae at accusantium voluptatem cum molestias tenetur qui.
+                                    </span>
+                                    <span class="d-block text-muted font-weight-bold pt-4">
+                                        Samanta Witting								</span>
+                                    <span class='d-block text-muted'>
+                                        SHAMPOOER								</span>
+                                </div>
+                            </div>
+                        </div>						
+                                            
+                    
+                        <div class="swiper-slide text-left">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <img class="w-100 cshadow" src="assets/images/testimonials/testimonial-2.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-md-8 my-auto ">
+                                    <span class="d-block">
+                                        <sup class='d-block-inline pr-2 text-muted'>
+                                            <i class="fas fa-quote-left"></i>  
+                                        </sup> Facere et culpa eius beatae quo perferendis veritatis molestiae soluta nulla et ratione impedit assumenda tempora delectus unde quis blanditiis asperiores delectus quia officia facilis hic est ducimus qui atque aut.
+                                    </span>
+                                    <span class="d-block text-muted font-weight-bold pt-4">
+                                        Mrs. Felicity Ankunding								</span>
+                                    <span class='d-block text-muted'>
+                                        SURVEY RESEARCHER								</span>
+                                </div>
+                            </div>
+                        </div>						
+                                            
+                    
+                        <div class="swiper-slide text-left">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <img class="w-100 cshadow" src="assets/images/testimonials/testimonial-3.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-md-8 my-auto ">
+                                    <span class="d-block">
+                                        <sup class='d-block-inline pr-2 text-muted'>
+                                            <i class="fas fa-quote-left"></i>  
+                                        </sup> Aliquid dicta dolorum dicta libero non ut voluptatum laboriosam necessitatibus quidem maxime laboriosam natus est placeat voluptas quae molestiae ullam blanditiis.
+                                    </span>
+                                    <span class="d-block text-muted font-weight-bold pt-4">
+                                        Dr. Jaycee Murazik								</span>
+                                    <span class='d-block text-muted'>
+                                        PRODUCTION PLANNING								</span>
+                                </div>
+                            </div>
+                        </div>						
+                                            
+                        
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="testimonial3-swiper-pagination pt-5"></div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5"></section>
+
+    <!-- PRICING TABLE -->
+    <section class="bg-sec bg-primary" id="pricing-table-3">
+    <div class="container py-5">
+
+        <!-- FOR DEMO PURPOSE -->
+        <header class="text-center mb-5 text-white">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+            <h1 class="text-light">PRICING</h1>
+            <p>Simple and Easy Pricing Options</p>
+            </div>
+        </div>
+        </header>
+        <!-- END -->
+
+
+
+        <div class="row text-center align-items-end">
+        <!-- Pricing Table-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="bg-white p-5 rounded-lg shadow">
+            <h1 class="h6 text-uppercase font-weight-bold mb-4">Starter</h1>
+            <h2 class="h1 font-weight-bold">$99<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+
+            <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+            <ul class="list-unstyled my-5 text-small text-left">
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Lorem ipsum dolor sit amet</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> At vero eos et accusamus</li>
+                <li class="mb-3 text-muted">
+                <i class="fa fa-times mr-2"></i>
+                <del>Nam libero tempore</del>
+                </li>
+                <li class="mb-3 text-muted">
+                <i class="fa fa-times mr-2"></i>
+                <del>Sed ut perspiciatis</del>
+                </li>
+                <li class="mb-3 text-muted">
+                <i class="fa fa-times mr-2"></i>
+                <del>Sed ut perspiciatis</del>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Sing Up</a>
+            </div>
+        </div>
+        <!-- END -->
+
+
+        <!-- Pricing Table-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="bg-white p-5 rounded-lg shadow">
+            <h1 class="h6 text-uppercase font-weight-bold mb-4">Standard</h1>
+            <h2 class="h1 font-weight-bold">$599<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+
+            <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+            <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Lorem ipsum dolor sit amet</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> At vero eos et accusamus</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Nam libero tempore</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+                <li class="mb-3 text-muted">
+                <i class="fa fa-times mr-2"></i>
+                <del>Sed ut perspiciatis</del>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Sign Up</a>
+            </div>
+        </div>
+        <!-- END -->
+
+
+        <!-- Pricing Table-->
+        <div class="col-lg-4">
+            <div class="bg-white p-5 rounded-lg shadow">
+            <h1 class="h6 text-uppercase font-weight-bold mb-4">Premium</h1>
+            <h2 class="h1 font-weight-bold">$999<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+
+            <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+            <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Lorem ipsum dolor sit amet</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> At vero eos et accusamus</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Nam libero tempore</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+                <li class="mb-3">
+                <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Sign Up</a>
+            </div>
+        </div>
+        <!-- END -->
+
+        </div>
+    </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class='bg-sec' id="si-team">
+        <div class='text-center'>
+            <h2>OUR STAFF</h2>
+            <span class='d-block text-muted fs-18'>Our awesome staff</span>
+        </div>
+        <!-- Swiper -->
+        <div class='container overflow-hidden pt-5 text-center'>
+            <div class="team-swiper-container ">
+                <div class="swiper-wrapper">
+
+                    
+                        <div class="swiper-slide">
+                            <div class='team-card bg-light border'>	
+                                <span class='d-block team-img-block bshadow  '>
+                                    <img src="assets/images/team/model-1.jpg" alt="" class="w-100 border-top">
+                                </span>
+                                <span class="d-block text-muted font-weight-bold p-3">
+                                    Gustave Gulgowski PhD							</span>
+                                <span class='d-block text-muted pb-3'>
+                                    CTO							</span>							
+                                <span class="d-block py-3 bg-primary">
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-twitter"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-google-plus-g"></i></a>
+                                </span>
+                            </div>
+                        </div>						
+                                            
+                    
+                        <div class="swiper-slide">
+                            <div class='team-card bg-light border'>	
+                                <span class='d-block team-img-block bshadow  '>
+                                    <img src="assets/images/team/model-2.jpg" alt="" class="w-100 border-top">
+                                </span>
+                                <span class="d-block text-muted font-weight-bold p-3">
+                                    Jeffery White							</span>
+                                <span class='d-block text-muted pb-3'>
+                                    ANALYST							</span>							
+                                <span class="d-block py-3 bg-primary">
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-twitter"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-google-plus-g"></i></a>
+                                </span>
+                            </div>
+                        </div>						
+                                            
+                    
+                        <div class="swiper-slide">
+                            <div class='team-card bg-light border'>	
+                                <span class='d-block team-img-block bshadow  '>
+                                    <img src="assets/images/team/model-3.jpg" alt="" class="w-100 border-top">
+                                </span>
+                                <span class="d-block text-muted font-weight-bold p-3">
+                                    Mr. Joshua Lind I							</span>
+                                <span class='d-block text-muted pb-3'>
+                                    BUSINESS DEVELOPER							</span>							
+                                <span class="d-block py-3 bg-primary">
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-twitter"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-google-plus-g"></i></a>
+                                </span>
+                            </div>
+                        </div>						
+                                            
+                    
+                        <div class="swiper-slide">
+                            <div class='team-card bg-light border'>	
+                                <span class='d-block team-img-block bshadow  '>
+                                    <img src="assets/images/team/model-4.jpg" alt="" class="w-100 border-top">
+                                </span>
+                                <span class="d-block text-muted font-weight-bold p-3">
+                                    Zack Durgan							</span>
+                                <span class='d-block text-muted pb-3'>
+                                    GROWTH HACKER							</span>							
+                                <span class="d-block py-3 bg-primary">
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-twitter"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-google-plus-g"></i></a>
+                                </span>
+                            </div>
+                        </div>						
+                                            
+                    
+                        <div class="swiper-slide">
+                            <div class='team-card bg-light border'>	
+                                <span class='d-block team-img-block bshadow  '>
+                                    <img src="assets/images/team/model-5.jpg" alt="" class="w-100 border-top">
+                                </span>
+                                <span class="d-block text-muted font-weight-bold p-3">
+                                    Laury Hagenes Sr.							</span>
+                                <span class='d-block text-muted pb-3'>
+                                    CTO							</span>							
+                                <span class="d-block py-3 bg-primary">
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-twitter"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href='#' class="a-socicon fs-22 text-light p-2"><i class="fab fa-google-plus-g"></i></a>
+                                </span>
+                            </div>
+                        </div>						
+                                            
+                        
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="team-swiper-pagination pt-5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="bg-light text-dark border bg-sec" id="si-contact">
+
+        <div class='text-center pb-5'>
+            <h2 class="text-dark">CONTACT FORM</h2>
+            <span class='d-block fs-18'>Drop us a line. We are open 24/7 !</span>
+        </div>
+        <div class='container pt-4'>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <span class="d-block pb-3">
+                        <h5 class="font-weight-bold ">Street Address</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                1234 Street, 56 Lane, Bermuda
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="d-block pb-3">
+                    <h5 class="font-weight-bold ">Email</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                abc@example.com, xyz@example.com
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="d-block pb-3">
+                    <h5 class="font-weight-bold ">Phone</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                +1 1234 567 901, +1 3456 789 301
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form action="#" method="post">
+                        <div class="custom-form">
+                            <div class="form-row">
+                                <div class="col-12 col-md-4 p-2">
+                                    <input type="text" class="form-control" name="your_name" placeholder="Name" required="required">
+                                </div>
+                                <div class="col-12 col-md-4 p-2">
+                                    <input type="email" class="form-control " name="your_email" placeholder="Email">
+                                </div>
+                                <div class="col-12 col-md-4 p-2">
+                                    <input type="text" class="form-control " name="your_phone" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class='form-row'>
+                                <div class="col p-2">
+                                    <textarea name="message" id="message"  class="form-control" rows="7" placeholder="Your message..."></textarea>
+                                </div>
+                            </div>
+                            <div class="text-center pt-4">
+                                <button class='btn btn-primary btn-md'>Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <!-- SOCICON -->
+    <section class="bg-sec">
+        <div class='container'>
+            <span class="d-block w-100 socicon-block text-center text-muted">
+                <h2>SHARE</h2>
+            </span>
+            <span class="d-block w-100 socicon-block text-center">
+                <a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-facebook-f"></i></a>
+                <a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-twitter"></i></a>
+                <a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-google-plus-g"></i></a>
+            </span>
+        </div>
+    </section>
+
+    <!-- FOOTER --> 
+    <section class="sm-sec bg-dark">
+        <footer class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <span class="d-block">
+                        <a href='#' class="d-block-inline fa-32 text-muted"><i class="fas fa-feather-alt"></i></a>
+                        <span class="d-block-inline pl-2 fa-32 text-muted footer-logo-text">Barty</span>
+                    </span>
+                    <span class="d-block text-muted">
+                        <p>Barty is a top quality company.
+                            Possimus ducimus autem corporis ratione aut aut modi est consequatur est ex eos dicta expedita molestiae qui officia deleniti aut					</p>
+                    </span>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="text-muted font-weight-normal">ADDRESS </h5>
+                    <ul class="list-unstyled">
+                        <li class="text-muted py-2">
+                            <i class="fa fa-map-marker pr-2" aria-hidden="true"></i> 
+                            1977 Wilderman Route
+    Roobtown, AK 74107					</li>
+                        <li class="text-muted py-2">
+                            <i class="fa fa-phone pr-2" aria-hidden="true"></i> 
+                            707.286.7777					</li> 
+                        <li class="text-muted py-2">
+                            <i class="fa fa-envelope pr-2" aria-hidden="true"></i>
+                            info@webdesignvista.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="text-muted font-weight-normal">SUBSCRIBE </h5>
+                    <ul class="list-unstyled">					
+                        <li class="text-muted py-2">
+                            Enter your email to subscribe to our newsletter
+                        </li> 
+                        <li class="text-muted py-2">
+                            <input type="text" class="form-control bg-dark border-secondary" name="subscribe-email">
+                        </li>
+                        <li class="text-muted py-2">
+                            <button class="btn btn-primary text-light btn-sm">Submit</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>	
+            <div class="copyright text-center text-muted">
+                <hr>
+                &copy; copyright - <a href="https://webdesignvista.com/" class="text-muted">Web Design Vista</a>,
+                All Rights Reserved
+            </div>	
+        </footer>
+        
+    </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<!-- Home page footer dynamic assets -->
+
+
+<!-- Swiper JS -->
+<script src="assets/plugins/swiper/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    var swiper1 = new Swiper('.swiper-container', {
+        speed: 1500,
+        spaceBetween: 30,
+        setWrapperSize: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+      
+    });
+
+    var swiper2 = new Swiper('.portfolio-swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.portfolio-swiper-pagination',
+            clickable: true,
+        },
+        breakpointsInverse: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is >= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+    var swiper3 = new Swiper('.team-swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: '.team-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+    var swiper4 = new Swiper('.brands-swiper-container', {
+        autoHeight: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 30,
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+
+    var swiper5 = new Swiper('.hero-swiper-container', {
+      pagination: {
+        el: '.hero-swiper-pagination',
+        clickable: true
+      },
+    });
+
+    var swiper6 = new Swiper('.testimonial3-swiper-container', {
+        spaceBetween: 30,
+        pagination: {
+            el: '.testimonial3-swiper-pagination',
+            clickable: true,
+        }
+    });
+
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<script src="assets/plugins/counterup/jquery.counterup.js"></script>
+<script>
+
+    jQuery(document).ready(function($) {
+
+        /* Counter */
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+
+        /* Nabar shrink */
+        $(document).on("scroll", function(){
+
+            if ($(document).scrollTop() > 100){
+                $(".primary-nav").addClass("shrink");
+            } else {
+                $(".primary-nav").removeClass("shrink");
+            }
+
+        });
+
+        /* Why Choose Us Accordion */
+
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+
+    });
+
+</script>
+
+
+<script src="assets/plugins/portfolio/js/filter.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.portfolios').filterData({
+			aspectRatio: '8:5', // how many height for single item
+		});
+	});
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script></html>
